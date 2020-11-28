@@ -54,7 +54,8 @@ db.once('open',()=>{
         {
             name: messageDetails.name, // fetch details of the name field from the DB to the name variable
             message: messageDetails.message, // fetch details of the message field from the DB to the message variable
-            timestamp: messageDetails.timestamp
+            timestamp: messageDetails.timestamp,
+            recieved: messageDetails.recieved
         }
         )
     } else{

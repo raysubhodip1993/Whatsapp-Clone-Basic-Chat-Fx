@@ -32,7 +32,7 @@ useEffect(()=>{
 
   const channel = pusher.subscribe('messages');
   channel.bind('inserted', (data) => {
-    alert(JSON.stringify(data));
+    //alert(JSON.stringify(data));
     setMessages([...messages, data])  ///....messages = means all the current messages ; append to the existing list of the messages
   });
 
@@ -52,7 +52,7 @@ console.log(messages);
    
       <div className="app_body">
       <Sidebar/>
-      <Chat/>
+      <Chat messages={messages}/>
       </div>
     
     </div>
